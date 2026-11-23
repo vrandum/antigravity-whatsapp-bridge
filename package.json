@@ -1,0 +1,22 @@
+{
+  "name": "antigravity-whatsapp-bridge",
+  "version": "0.1.0",
+  "description": "Ponte local entre WhatsApp (Baileys) e Antigravity IDE (CDP)",
+  "type": "module",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "test:etapa1": "node scripts/test-etapa1.mjs",
+    "test:etapa2": "node scripts/test-etapa2.mjs",
+    "tray": "powershell -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File scripts/tray.ps1",
+    "startup:install": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install-startup.ps1",
+    "startup:remove": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/uninstall-startup.ps1"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc14",
+    "dotenv": "^17.3.1",
+    "pino": "^9.6.0",
+    "playwright-core": "^1.59.1",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
